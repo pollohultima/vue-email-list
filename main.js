@@ -4,7 +4,6 @@ const app = new Vue({
 
     data: {
         emailList: [],
-        email: '',
     },
 
     mounted() {
@@ -13,8 +12,8 @@ const app = new Vue({
                 .get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then(response => {
                     console.log(response);
-                    this.email = (response.data.response)
-                    this.emailList.push(this.email)
+                    email = (response.data.response);
+                    this.emailList.push(email)
                 })
         }
     },
